@@ -1,0 +1,138 @@
+.page-header {
+  position: relative;
+  background-color: $base-white;
+  min-height: 60px;
+}
+
+.page-header__logo {
+  margin-top: 12px;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__other-nav {
+  min-width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__other-nav span {
+  display: none;
+}
+
+.page-header__auth,
+.page-header__cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+}
+
+.page-header__toggle {
+  width: 30px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 0;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.page-header__container--closed .page-header__toggle {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    width: 16px;
+    height: 1px;
+    background-color: $base-black;
+    box-shadow: 0 5px 0 0 $base-black,
+      0 -4px 0 0 $base-black;
+  }
+}
+
+.page-header__container--opened .page-header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 16px;
+    height: 1px;
+    background-color: $base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $base-primary;
+  }
+}
+
+.page-header__list {
+  position: absolute;
+  display: none;
+
+  @include list-default;
+}
+
+.page-header__container--opened .page-header__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $base-white;
+  top: 60px;
+  right: 0;
+  left: 0;
+  z-index: 12;
+}
+
+
+.page-header__item {
+  flex-basis: 100%;
+  border-top: 1px solid $base-secondary;
+  min-height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.page-header__item:last-child {
+  border-bottom: 1px solid $base-secondary;
+}
+
+.page-header__link {
+  @include link-default;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.page-header__container--nojs .page-header__toggle {
+  display: none;
+}

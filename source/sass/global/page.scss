@@ -1,0 +1,24 @@
+.page {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.page__body {
+  min-width: 320px;
+  font-family: $font-default;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+}

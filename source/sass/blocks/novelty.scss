@@ -1,0 +1,37 @@
+.novelty__action {
+  color: $base-primary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.novelty__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.novelty__old-price {
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 32px;
+  margin-left: 25px;
+}
+
+.novelty__price {
+  color: $base-black;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.novelty__button {
+  margin-left: 20px;
+}
+
+.novelty__description {
+  text-align: center;
+}

@@ -1,0 +1,18 @@
+.catalog {
+  background-color: $lightest-grey;
+}
+
+.catalog__action {
+  color: $base-primary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.catalog__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}

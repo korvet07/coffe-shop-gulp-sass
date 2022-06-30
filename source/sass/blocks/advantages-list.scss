@@ -1,0 +1,45 @@
+.advantages-list {
+  @include list-default;
+}
+
+.advantages-list__item-icon-1 {
+  width: 52px;
+  height: 56px;
+  background: url(../../img/speed-icon.svg) center no-repeat;
+  margin: 0 auto;
+}
+
+.advantages-list__item-icon-2 {
+  width: 52px;
+  height: 56px;
+  background: url(../../img/amenity-icon.svg) center no-repeat;
+  margin: 0 auto;
+}
+
+.advantages-list__item-icon-3 {
+  width: 52px;
+  height: 56px;
+  background: url(../../img/courage-icon.svg) center no-repeat;
+  margin: 0 auto;
+}
+
+.advantages-list__item-icon-4 {
+  width: 52px;
+  height: 56px;
+  background: url(../../img/environmental-icon.svg) center no-repeat;
+  margin: 0 auto;
+}
+
+.advantages-list__item-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.advantages-list__item-description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}

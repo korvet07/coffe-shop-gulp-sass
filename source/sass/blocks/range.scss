@@ -1,0 +1,64 @@
+.range__scale {
+  position: relative;
+  width: 280px;
+  height: 2px;
+  background-color: $light-grey;
+  margin: 0 auto;
+  margin-bottom: 33px;
+}
+
+.range__bar {
+  position: absolute;
+  height: 2px;
+  width: 241px;
+  background-color: $primary-lighter;
+}
+
+.range__toggle-min,
+.range__toggle-max {
+  position: absolute;
+  top: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  cursor: pointer;
+}
+
+.range__toggle-min {
+  left: 0;
+}
+
+.range__toggle-max {
+  left: 228px;
+}
+
+.range__label-value-min,
+.range__label-value-max {
+  width: 125px;
+  height: 40px;
+  border: 2px solid $primary-lighter;
+  display: inline-flex;
+  align-items: center;
+}
+
+.range__input {
+  border: none;
+  width: 100%;
+}
+
+.range__wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: $base-grey;
+    left: 48%;
+    top: 50%;
+  }
+}
