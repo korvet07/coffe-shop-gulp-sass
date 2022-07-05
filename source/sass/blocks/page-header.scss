@@ -51,7 +51,7 @@
   flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
-    margin-left: 23px;
+    margin-left: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -182,7 +182,7 @@
   }
 }
 
-.page-header__container--opened .page-header__list {
+.page-header__container .page-header__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
