@@ -58,7 +58,7 @@
   padding: 4px 0 4px 5px;
   border: none;
   appearance: none;
-  background-image: url(../../img/marker-select-default.svg);
+  background-image: url("../../img/marker-select-default.svg");
   background-repeat: no-repeat;
   background-position: right 5px center;
   background-size: 10px 6px;
@@ -67,7 +67,7 @@
 
   &:focus {
     outline: 2px solid $base-primary;
-    background-image: url(../../img/marker-select-top.svg);
+    background-image: url("../../img/marker-select-top.svg");
   }
 }
 

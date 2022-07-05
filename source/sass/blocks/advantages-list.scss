@@ -18,19 +18,19 @@
   margin: 0 auto;
 
   &--icon-1 {
-    background: url(../../img/speed-icon.svg) center/cover no-repeat;
+    background: url("../../img/speed-icon.svg") center/cover no-repeat;
   }
 
   &--icon-2 {
-    background: url(../../img/amenity-icon.svg) center/cover no-repeat;
+    background: url("../../img/amenity-icon.svg") center/cover no-repeat;
   }
 
   &--icon-3 {
-    background: url(../../img/courage-icon.svg) center/cover no-repeat;
+    background: url("../../img/courage-icon.svg") center/cover no-repeat;
   }
 
   &--icon-4 {
-    background: url(../../img/environmental-icon.svg) center/cover no-repeat;
+    background: url("../../img/environmental-icon.svg") center/cover no-repeat;
   }
 
   @media (min-width: 768px) {
@@ -94,4 +94,3 @@
     text-align: center;
   }
 }
-

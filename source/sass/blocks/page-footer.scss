@@ -31,7 +31,7 @@
     position: absolute;
     width: 13px;
     height: 16px;
-    background: url(../../img/address-icon.svg) center/cover no-repeat;
+    background: url("../../img/address-icon.svg") center/cover no-repeat;
     left: 0;
 
     @media (min-width: $tablet-width) {
@@ -46,7 +46,7 @@
   margin-top: 16px;
 
   &::after {
-    background: url(../../img/phone-icon.svg) center/cover no-repeat;
+    background: url("../../img/phone-icon.svg") center/cover no-repeat;
   }
 }
 
