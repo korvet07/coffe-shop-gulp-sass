@@ -1,0 +1,28 @@
+.footer-nav {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 317px;
+  }
+}
+
+.footer-nav__list {
+  @include list-default;
+}
+
+.footer-nav__link {
+  @include link-default;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: left;
+}
+
+.footer-nav__item:not(:last-child) {
+  margin-bottom: 20px;
+}

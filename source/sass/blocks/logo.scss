@@ -1,7 +1,37 @@
 .logo {
+  @media (min-width: $tablet-width) {
+    align-self: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo__img {
   width: 32px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
 }
 
 .logo__text {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 20px;
+  }
 }

@@ -1,12 +1,69 @@
+.form-filter {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    width: 318px;
+  }
+}
+
 .form-filter__price-wrapper {
   @include fieldset-default;
   max-width: 500px;
   margin: 0 auto;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 30px;
+    max-width: auto;
+    width: 223px;
+  }
 }
 
-.form-filter__price-title {
+.form-filter__title {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
+}
+
+.form-filter__country-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.form-filter__milk {
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 5px;
+  }
+}
+
+.form-filter__wrapper-button {
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-basis: auto;
+  }
+}
+
+.form-filter__price-range {
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }

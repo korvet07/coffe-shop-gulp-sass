@@ -1,0 +1,66 @@
+.filter-milk {
+  @include fieldset-default;
+}
+
+.filter-milk__list {
+  @include list-default;
+  padding-bottom: 4px;
+}
+
+.filter-milk__control-mark {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $base-grey;
+  border-radius: 50%;
+}
+
+
+.filter-milk__input[type="radio"]:checked + .filter-milk__control-mark {
+  border: 2px solid $base-primary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $base-primary;
+    transition: all 0.5s ease-out;
+  }
+}
+
+.filter-milk__input[type="radio"]:disabled + .filter-milk__control-mark {
+  border: 2px solid $light-grey;
+
+  &::after {
+    background-color: $light-grey;
+  }
+}
+
+.filter-milk__input[type="radio"]:disabled ~ .filter-milk__control-label {
+  color: $light-grey;
+}
+
+.filter-milk__control-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &:active {
+    outline: 1px solid $base-primary;
+  }
+}
+
+.filter-milk__control-label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 10px;
+}

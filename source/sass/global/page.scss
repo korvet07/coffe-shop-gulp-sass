@@ -12,6 +12,7 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .page__body {
@@ -21,4 +22,5 @@ img {
   line-height: 20px;
   color: #333333;
   margin: 0;
+  overflow-x: hidden;
 }

@@ -1,33 +1,61 @@
 .advantages-list {
   @include list-default;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 317px);
+  }
 }
 
-.advantages-list__item-icon-1 {
+.advantages-list__wrapper {
   width: 52px;
   height: 56px;
-  background: url(../../img/speed-icon.svg) center no-repeat;
   margin: 0 auto;
+
+  &--icon-1 {
+    background: url(../../img/speed-icon.svg) center/cover no-repeat;
+  }
+
+  &--icon-2 {
+    background: url(../../img/amenity-icon.svg) center/cover no-repeat;
+  }
+
+  &--icon-3 {
+    background: url(../../img/courage-icon.svg) center/cover no-repeat;
+  }
+
+  &--icon-4 {
+    background: url(../../img/environmental-icon.svg) center/cover no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    grid-area: 1/1/3/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
 }
 
-.advantages-list__item-icon-2 {
-  width: 52px;
-  height: 56px;
-  background: url(../../img/amenity-icon.svg) center no-repeat;
-  margin: 0 auto;
-}
+.advantages-list__item {
+  margin-bottom: 32px;
 
-.advantages-list__item-icon-3 {
-  width: 52px;
-  height: 56px;
-  background: url(../../img/courage-icon.svg) center no-repeat;
-  margin: 0 auto;
-}
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    max-width: 339px;
+  }
 
-.advantages-list__item-icon-4 {
-  width: 52px;
-  height: 56px;
-  background: url(../../img/environmental-icon.svg) center no-repeat;
-  margin: 0 auto;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .advantages-list__item-title {
@@ -35,6 +63,15 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+  margin: 10px 0 4px;
+
+  @media (min-width: $tablet-width) {
+    justify-self: start;
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .advantages-list__item-description {
@@ -42,4 +79,19 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+  margin: 0;
+
+
+  @media (min-width: $tablet-width) {
+    place-self: start start;
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    place-self: center center;
+    text-align: center;
+  }
 }
+

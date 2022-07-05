@@ -1,9 +1,32 @@
+.novelty {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    padding-right: 40px;
+  }
+}
+
 .novelty__action {
   color: $base-primary;
   font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 10px 0 4px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .novelty__title {
@@ -12,6 +35,22 @@
   line-height: 48px;
   text-align: center;
   margin: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 4px 0 16px;
+    text-align: left;
+  }
+}
+
+.novelty__title br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .novelty__old-price {
@@ -19,6 +58,10 @@
   font-size: 16px;
   line-height: 32px;
   margin-left: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .novelty__price {
@@ -34,4 +77,37 @@
 
 .novelty__description {
   text-align: center;
+  margin: 10px 0 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 570px;
+    margin: 16px auto 20px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+}
+
+.novelty__description br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
+}
+
+.novelty__footer-wrapper {
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-right: 249px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }

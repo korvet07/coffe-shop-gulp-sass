@@ -1,0 +1,37 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 66px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    min-height: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 76px;
+  }
+}
+
+.copyright__link-icon {
+  @include link-default;
+  width: 112px;
+  height: 16px;
+}
+
+.copyright__link-icon > svg {
+  fill: $base-grey;
+}
+
+.copyright__link-icon:hover > svg,
+.copyright__link-icon:focus > svg {
+  fill: $base-primary;
+}
+
+.copyright__link-icon:active > svg {
+  fill: $primary-darker;
+}

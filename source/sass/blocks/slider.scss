@@ -1,9 +1,113 @@
+
+.slider {
+  height: 656px;
+
+  @media (min-width: $tablet-width) {
+    height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+  }
+}
+
 .slider__content {
-  min-height: 656px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .slider__img {
   width: 280px;
   height: 280px;
   margin: 0 auto;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: 476px;
+    order: 1;
+    position: absolute;
+    bottom: -188px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
+    order: 0;
+    position: static;
+    margin-right: 30px;
+    margin-top: 30px;
+  }
+}
+
+.slider__button-next,
+.slider__button-prev {
+  position: absolute;
+  top: 48%;
+  left: 0;
+  width: 11px;
+  height: 20px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 0;
+    top: 52%;
+  }
+}
+
+.slider__button-next {
+  right: 0;
+  left: auto;
+
+  @media (min-width: $tablet-width) {
+    right: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 0;
+  }
+}
+
+.slider__button-next > svg,
+.slider__button-prev > svg {
+  fill: $base-primary;
+}
+
+.slider__button-next:disabled > svg,
+.slider__button-prev:disabled > svg {
+  fill: $base-grey;
+}
+
+.slider .slider__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.slider__pagination span {
+  width: 62px;
+  height: 5px;
+  border-radius: 4px;
+}
+
+.slider__img-description {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 15px;
+  }
 }

@@ -5,6 +5,14 @@
   background-color: $light-grey;
   margin: 0 auto;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
 }
 
 .range__bar {
@@ -12,17 +20,27 @@
   height: 2px;
   width: 241px;
   background-color: $primary-lighter;
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+    height: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+  }
 }
 
 .range__toggle-min,
 .range__toggle-max {
   position: absolute;
   top: -12px;
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 2px solid $primary-lighter;
   cursor: pointer;
+  background-color: $base-white;
 }
 
 .range__toggle-min {
@@ -30,21 +48,51 @@
 }
 
 .range__toggle-max {
-  left: 228px;
+  left: 224px;
+
+  @media (min-width: $tablet-width) {
+    left: 177px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 272px;
+  }
 }
 
 .range__label-value-min,
 .range__label-value-max {
   width: 125px;
   height: 40px;
+  background-color: $base-white;
   border: 2px solid $primary-lighter;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
+  padding: 5px 10px;
+  padding-left: 45px;
+
+  @media (min-width: $tablet-width) {
+    width: 97px;
+    padding-left: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    padding-left: 50px;
+  }
 }
 
 .range__input {
   border: none;
   width: 100%;
+  appearance: textfield;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $base-black;
+  }
 }
 
 .range__wrapper-inputs {
