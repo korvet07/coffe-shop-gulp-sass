@@ -1,6 +1,8 @@
 const buttonMenu = document.querySelector('.page-header__toggle');
 const controllerMenu = document.querySelector('.page-header__container');
 controllerMenu.classList.remove('page-header__container--nojs');
+controllerMenu.classList.remove('page-header__container--opened');
+controllerMenu.classList.add('page-header__container--closed');
 buttonMenu.onclick = function () {
   controllerMenu.classList.toggle('page-header__container--closed');
   controllerMenu.classList.toggle('page-header__container--opened');

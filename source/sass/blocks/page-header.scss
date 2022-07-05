@@ -178,11 +178,12 @@
 
   @media (min-width: $tablet-width) {
     position: static;
-    display: block;
+    display: flex;
+    flex-direction: row;
   }
 }
 
-.page-header__container .page-header__list {
+.page-header__container--opened .page-header__list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -197,6 +198,12 @@
   }
 }
 
+.page-header__container--closed ~ .page-header__list,
+.page-header__container--opened ~ .page-header__list {
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
 
 .page-header__item {
   flex-basis: 100%;
