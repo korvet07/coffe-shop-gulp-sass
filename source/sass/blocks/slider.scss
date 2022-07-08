@@ -60,11 +60,17 @@
 
   @media (min-width: $tablet-width) {
     left: 15px;
+    top: 0;
+    height: 100%;
   }
 
   @media (min-width: $desktop-width) {
     left: 0;
-    top: 52%;
+    width: 80px;
+
+    &:active {
+      background: linear-gradient(to right, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 }
 
@@ -78,13 +84,29 @@
 
   @media (min-width: $desktop-width) {
     right: 0;
+
+    &:active {
+      background: linear-gradient(to left, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 }
 
 .slider__button-next > svg,
 .slider__button-prev > svg {
+  position: absolute;
+  top: 50%;
+  left: 45%;
   fill: $base-primary;
 }
+
+.slider__button-next > svg {
+  left: auto;
+
+  @media (min-width: $desktop-width) {
+    right: 45%;
+  }
+}
+
 
 .slider__button-next:disabled > svg,
 .slider__button-prev:disabled > svg {
@@ -108,5 +130,11 @@
 .slider__img-description {
   @media (min-width: $desktop-width) {
     margin-bottom: 15px;
+  }
+}
+
+.slider__pagination.swiper-pagination {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
   }
 }
