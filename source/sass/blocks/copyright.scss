@@ -8,6 +8,15 @@
   line-height: 16px;
   color: $base-grey;
 
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
   @media (min-width: $tablet-width) {
     min-height: 86px;
   }
@@ -23,15 +32,15 @@
   height: 16px;
 }
 
-.copyright__link-icon > svg {
+.copyright svg {
   fill: $base-grey;
 }
 
-.copyright__link-icon:hover > svg,
-.copyright__link-icon:focus > svg {
+.copyright:hover svg,
+.copyright:focus svg {
   fill: $base-primary;
 }
 
-.copyright__link-icon:active > svg {
+.copyright:active svg {
   fill: $primary-darker;
 }

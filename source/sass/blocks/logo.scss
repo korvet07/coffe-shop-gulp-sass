@@ -1,4 +1,6 @@
 .logo {
+  flex-shrink: 0;
+
   @media (min-width: $tablet-width) {
     align-self: center;
   }

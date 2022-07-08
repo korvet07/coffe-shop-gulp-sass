@@ -1,4 +1,5 @@
 .button {
+  @include link-default;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,10 +24,6 @@
 
   &:active {
     background-color: $primary-darker;
-  }
-
-  &:disabled {
-    background-color: $base-grey;
   }
 
   &--inversion {
@@ -55,14 +52,51 @@
     }
   }
 
-  &--img-cart {
-    font-size: 14px;
-    line-height: 20px;
-    min-width: 141px;
-    background-image: url("../../img/button-img.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 16px;
-    background-position: left 20px center;
-    padding-left: 33px;
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $base-grey;
+      color: $base-white;
+    }
+  }
+}
+
+.button--img-cart {
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 141px;
+  min-height: 36px;
+  background-image: url("../../img/button-img.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  background-position: left 14px center;
+  padding-left: 33px;
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $base-grey;
+      color: $base-white;
+    }
+  }
+}
+
+.button--inversion:disabled {
+  background-color: $light-grey;
+  color: $base-white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $light-grey;
+    color: $base-white;
   }
 }

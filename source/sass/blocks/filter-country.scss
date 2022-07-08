@@ -56,8 +56,16 @@
   background-color: $light-grey;
 }
 
+.filter-country__input:checked:disabled + .filter-country__input-mark {
+  background-color: $light-grey;
+
+  &::after {
+    background-color: $base-grey;
+  }
+}
+
 .filter-country__input:disabled ~ .filter-country__item-title {
-  color: $light-grey;
+  color: $base-grey;
 }
 
 .filter-country__item-title {

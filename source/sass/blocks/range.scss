@@ -21,6 +21,14 @@
   width: 241px;
   background-color: $primary-lighter;
 
+  &--disabled {
+    background-color: $base-grey;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+
   @media (min-width: $tablet-width) {
     width: 192px;
     height: 4px;
@@ -29,6 +37,11 @@
   @media (min-width: $desktop-width) {
     width: 274px;
   }
+}
+
+.range__bar--disabled .range__toggle-min,
+.range__bar--disabled .range__toggle-max {
+  border: 2px solid $base-grey;
 }
 
 .range__toggle-min,
@@ -41,6 +54,31 @@
   border: 2px solid $primary-lighter;
   cursor: pointer;
   background-color: $base-white;
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:active {
+    border: 2px solid $base-primary;
+
+    &::after {
+      background-color: $base-primary;
+    }
+  }
 }
 
 .range__toggle-min {
@@ -71,6 +109,19 @@
   padding: 5px 10px;
   padding-left: 45px;
 
+  &--disabled {
+    border: 2px solid $light-grey;
+  }
+
+  &:focus {
+    border: 2px solid $primary-darker;
+  }
+
+  &:disabled {
+    border: 2px solid $lightest-grey;
+    color: $lightest-grey;
+  }
+
   @media (min-width: $tablet-width) {
     width: 97px;
     padding-left: 35px;
@@ -82,16 +133,24 @@
   }
 }
 
-.range__input {
+.range__input-min,
+.range__input-max {
   border: none;
   width: 100%;
   appearance: textfield;
+  color: $base-black;
+  font-family: $font-default;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  outline: none;
 
   &::placeholder {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: $base-black;
+    color: $base-grey;
   }
 }
 

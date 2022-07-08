@@ -1,5 +1,9 @@
 const buttonMenu = document.querySelector('.page-header__toggle');
 const controllerMenu = document.querySelector('.page-header__container');
+const formFilter = document.querySelector('.formFilter');
+const resetButton = document.querySelector('.button[type="reset"]');
+const submitButton = document.querySelector('.form-filter__submit');
+
 controllerMenu.classList.remove('page-header__container--nojs');
 controllerMenu.classList.remove('page-header__container--opened');
 controllerMenu.classList.add('page-header__container--closed');
@@ -27,7 +31,7 @@ new Swiper('.slider', {
     sensitivity: 2,
   },
   spaceBetween: 400,
-  autoplay:{
+  autoplay: {
     delay: 1000,
     stopOnLastSlide: true,
     disableOnInteraction: true,
@@ -64,5 +68,46 @@ const mainPinMarker = L.marker(
     icon: mainPinIcon,
   },
 );
-
 mainPinMarker.addTo(map);
+// настройки noUiSlider
+const sliderElement = document.querySelector('.range__scale');
+const valueElementMin = document.querySelector('.range__input-min');
+const valueElementMax = document.querySelector('.range__input-max');
+valueElementMin.value = 0;
+valueElementMax.value = 900;
+
+noUiSlider.create(sliderElement, {
+  range: {
+    min: 0,
+    max: 1100,
+  },
+  start: [0, 900],
+  step: 1,
+  connect: true,
+  margin: 100,
+  format: {
+    to: function (value) {
+      if (Number.isInteger(value)) {
+        return value.toFixed(0);
+      }
+      return value.toFixed(1);
+    },
+    from: function (value) {
+      return parseFloat(value);
+    },
+  },
+});
+sliderElement.noUiSlider.on('update', (values, handle) => {
+  (handle ? valueElementMax : valueElementMin).value = values[handle];
+});
+resetButton.addEventListener('click', () => {
+  valueElementMin.value = 0;
+  valueElementMax.value = 900;
+  sliderElement.noUiSlider.updateOptions({
+    range: {
+      min: 0,
+      max: 1100,
+    },
+    start: [0, 900]
+  });
+});

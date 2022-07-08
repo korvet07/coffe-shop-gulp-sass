@@ -1,0 +1,53 @@
+.range__scale.noUi-target {
+  background-color: $light-grey;
+}
+
+.range__scale.noUi-horizontal {
+  height: 4px;
+  border: none;
+}
+
+
+.range__scale[tabindex="1"] .noUi-handle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  cursor: pointer;
+  background-color: $base-white;
+  top: -12px;
+
+  &::after,
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:active {
+    &::after {
+      background-color: $base-primary;
+    }
+  }
+}
+
+.range__scale .noUi-connect {
+  background-color: $primary-lighter;
+}
