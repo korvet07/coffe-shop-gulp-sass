@@ -212,11 +212,11 @@
                 <div class="range__wrapper-inputs">
                   <label class="range__label-value-min" tabindex="1">
                     <input id="slider-margin-value-min" class="range__input-min" type="text" name="min-price"
-                      placeholder="0" onblur="this.form.submit()" />
+                      placeholder="0" />
                   </label>
                   <label class="range__label-value-max" tabindex="1">
                     <input id="slider-margin-value-max" class="range__input-max" type="text" name="max-price"
-                      placeholder="900" onblur="this.form.submit()" />
+                      placeholder="900" />
                   </label>
                 </div>
               </div>
@@ -227,7 +227,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk"
-                      value="no-matter-milk" checked onchange="this.form.submit()" />
+                      value="no-matter-milk" checked/>
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Неважно</span>
                   </label>
@@ -235,7 +235,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk"
-                      value="animal-only-milk" onchange="this.form.submit()" />
+                      value="animal-only-milk"/>
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Только животное</span>
                   </label>
@@ -243,7 +243,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk"
-                      value="vegetable-only-milk" onchange="this.form.submit()" />
+                      value="vegetable-only-milk" />
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Только растительное</span>
                   </label>
@@ -251,7 +251,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk" value="without-milk"
-                      disabled onchange="this.form.submit()" />
+                      disabled />
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Без молока</span>
                   </label>
@@ -262,32 +262,29 @@
               <legend class="form-filter__title">Страна произрастания</legend>
               <ul class="filter-country__list">
                 <li class="filter-country__item">
-                  <input class="visually-hidden filter-country__input" type="checkbox" name="brazil" id="brazil" checked
-                    onchange="this.form.submit()">
+                  <input class="visually-hidden filter-country__input" type="checkbox" name="brazil" id="brazil"
+                    checked>
                   <span class="filter-country__input-mark"></span>
                   <label for="brazil" class="filter-country__item-title">Бразилия</label>
                 </li>
                 <li class="filter-country__item">
-                  <input class="visually-hidden filter-country__input" type="checkbox" name="ethiopia" id="ethiopia"
-                    onchange="this.form.submit()">
+                  <input class="visually-hidden filter-country__input" type="checkbox" name="ethiopia" id="ethiopia">
                   <span class="filter-country__input-mark"></span>
                   <label for="ethiopia" class="filter-country__item-title">Эфиопия</label>
                 </li>
                 <li class="filter-country__item">
-                  <input class="visually-hidden filter-country__input" type="checkbox" name="colombia" id="colombia"
-                    onchange="this.form.submit()">
+                  <input class="visually-hidden filter-country__input" type="checkbox" name="colombia" id="colombia">
                   <span class="filter-country__input-mark"></span>
                   <label for="colombia" class="filter-country__item-title">Колумбия</label>
                 </li>
                 <li class="filter-country__item">
-                  <input class="visually-hidden filter-country__input" type="checkbox" name="costa-rica" id="costa-rica"
-                    onchange="this.form.submit()">
+                  <input class="visually-hidden filter-country__input" type="checkbox" name="costa-rica"
+                    id="costa-rica">
                   <span class="filter-country__input-mark"></span>
                   <label for="costa-rica" class="filter-country__item-title">Коста-Рика</label>
                 </li>
                 <li class="filter-country__item">
-                  <input class="visually-hidden filter-country__input" type="checkbox" name="peru" id="peru" disabled
-                    onchange="this.form.submit()">
+                  <input class="visually-hidden filter-country__input" type="checkbox" name="peru" id="peru" disabled>
                   <span class="filter-country__input-mark"></span>
                   <label for="peru" class="filter-country__item-title">Перу</label>
                 </li>
@@ -301,8 +298,7 @@
           <div class="catalog__wrapper-list">
             <div class="catalog__wrapper-select">
               <span class="catalog__select-title">Сортировка:</span>
-              <select form="form-filter" name="catalog-select" id="catalog-select" class="catalog__select"
-                onchange="this.form.submit()">
+              <select form="form-filter" name="catalog-select" id="catalog-select" class="catalog__select">
                 <option value="default" class="catalog__select-option">по умолчанию</option>
                 <option value="expensive-first" class="catalog__select-option">сначала дорогие</option>
                 <option value="cheap-first" class="catalog__select-option">сначала дешёвые</option>

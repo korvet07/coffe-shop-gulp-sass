@@ -3,7 +3,13 @@ const controllerMenu = document.querySelector('.page-header__container');
 const formFilter = document.querySelector('.formFilter');
 const resetButton = document.querySelector('.button[type="reset"]');
 const submitButton = document.querySelector('.form-filter__submit');
+const controlSubmit = document.querySelector('.catalog__wrapper');
 
+controlSubmit.addEventListener('change',(evt)=>{
+  if(evt.target.nodeName === 'INPUT' || evt.target.nodeName === 'SELECT'){
+    submitButton.click();
+  }
+});
 controllerMenu.classList.remove('page-header__container--nojs');
 controllerMenu.classList.remove('page-header__container--opened');
 controllerMenu.classList.add('page-header__container--closed');
