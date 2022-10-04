@@ -86,6 +86,7 @@ const mainPinMarker = L.marker(
   },
 );
 mainPinMarker.addTo(map);
+
 // настройки noUiSlider
 const sliderElement = document.querySelector('.range__scale');
 const valueElementMin = document.querySelector('.range__input-min');

@@ -211,12 +211,12 @@
                 </div>
                 <div class="range__wrapper-inputs">
                   <label class="range__label-value-min" tabindex="1">
-                    <input id="slider-margin-value-min" class="range__input-min" type="text" name="min-price"
-                      placeholder="0" />
+                    <input type="number" id="slider-margin-value-min" class="range__input-min" type="text" min="0"
+                      max="1000" name="min-price" placeholder="0" />
                   </label>
                   <label class="range__label-value-max" tabindex="1">
-                    <input id="slider-margin-value-max" class="range__input-max" type="text" name="max-price"
-                      placeholder="900" />
+                    <input type="number" id="slider-margin-value-max" class="range__input-max" type="number" min="100"
+                      max="1100" name="max-price" placeholder="900" />
                   </label>
                 </div>
               </div>
@@ -227,7 +227,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk"
-                      value="no-matter-milk" checked/>
+                      value="no-matter-milk" checked />
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Неважно</span>
                   </label>
@@ -235,7 +235,7 @@
                 <li class="filter-milk__item">
                   <label class="filter-milk__control-input">
                     <input class="visually-hidden filter-milk__input" type="radio" name="type-milk"
-                      value="animal-only-milk"/>
+                      value="animal-only-milk" />
                     <span class="filter-milk__control-mark"></span>
                     <span class="filter-milk__control-label">Только животное</span>
                   </label>
