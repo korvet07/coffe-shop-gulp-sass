@@ -68,6 +68,10 @@
   color: $base-grey;
 }
 
+.filter-country__input:not(:disabled) ~ .filter-country__item-title {
+  cursor: pointer;
+}
+
 .filter-country__item-title {
   font-size: 16px;
   line-height: 24px;
