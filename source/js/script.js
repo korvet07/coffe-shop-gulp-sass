@@ -18,15 +18,15 @@ buttonMenu.onclick = function () {
   controllerMenu.classList.toggle('page-header__container--opened');
 };
 // добавляет cursor: 'pointer' для не отключённых радиоинпутов
-const labelRadioInputs = document.querySelectorAll('.filter-milk__control-input');
-labelRadioInputs.forEach((elem) => {
-  let inputRadio = elem.querySelector('.filter-milk__input');
-  if (!inputRadio.disabled) {
-    elem.onmouseover = function (evt) {
-      evt.target.style.cursor = 'pointer';
-    };
-  }
-});
+// const labelRadioInputs = document.querySelectorAll('.filter-milk__control-input');
+// labelRadioInputs.forEach((elem) => {
+//   let inputRadio = elem.querySelector('.filter-milk__input');
+//   if (!inputRadio.disabled) {
+//     elem.onmouseover = function (evt) {
+//       evt.target.style.cursor = 'pointer';
+//     };
+//   }
+// });
 
 // настройки swiper
 new Swiper('.slider', {
