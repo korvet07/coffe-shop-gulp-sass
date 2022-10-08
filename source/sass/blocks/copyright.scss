@@ -8,15 +8,6 @@
   line-height: 16px;
   color: $base-grey;
 
-  &:hover,
-  &:focus {
-    color: $base-primary;
-  }
-
-  &:active {
-    color: $primary-darker;
-  }
-
   @media (min-width: $tablet-width) {
     min-height: 86px;
   }
