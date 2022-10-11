@@ -107,6 +107,7 @@ const copy = (done) => {
     'source/swiper/**',
     'source/*.ico',
     'source/manifest.webmanifest',
+    'source/noUiSlider-15.6.0/**'
   ], {
     base: 'source'
   })
