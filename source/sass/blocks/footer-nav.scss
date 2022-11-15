@@ -21,6 +21,14 @@
   font-size: 12px;
   line-height: 16px;
   text-align: left;
+
+  &:hover,
+  &:focus {
+    padding: 7px 0;
+    color: $base-primary;
+    border-bottom: 2px solid $base-primary;
+    transform: all 3s ease;
+  }
 }
 
 .footer-nav__item:not(:last-child) {
