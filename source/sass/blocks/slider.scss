@@ -68,7 +68,9 @@
     left: 0;
     width: 80px;
 
-    &:active {
+    &:active,
+    &:hover,
+    &:focus {
       background: linear-gradient(to right, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
     }
   }
@@ -85,7 +87,9 @@
   @media (min-width: $desktop-width) {
     right: 0;
 
-    &:active {
+    &:active,
+    &:hover,
+    &:focus {
       background: linear-gradient(to left, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
     }
   }
