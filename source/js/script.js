@@ -85,6 +85,7 @@ new Swiper('.slider', {
 		clickable: true,
 	},
 	slideToClickedSlide: true,
+  loop: true,
 	keyboard: {
 		enabled: true,
 		onlyInViewport: true,

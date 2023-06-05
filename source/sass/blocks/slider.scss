@@ -52,6 +52,7 @@
 .slider__button-next,
 .slider__button-prev {
   position: absolute;
+  z-index: 1;
   top: 48%;
   left: 0;
   width: 11px;
